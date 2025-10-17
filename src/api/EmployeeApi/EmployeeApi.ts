@@ -1,7 +1,8 @@
 import type { Employee } from "./EmployeeApi.types";
 import { toast } from "react-toastify";
 
-const SIGNATURE = "fairatmos-firman-ramadhan";
+const SIGNATURE = import.meta.env.VITE_FAIRATMOS_SIGNATURE;
+// VITE_FAIRATMOS_SIGNATURE=fairatmos-firman-ramadhan
 const API_BASE = "https://api.fairatmos.dev/api/v1/trial-test/frontend";
 
 export const createEmployee = async (employee: Employee) => {
